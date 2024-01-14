@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        box-sizing: border-box;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <div style="text-align: center;">
+        <h1>javascript program light on and off button</h1>
+        <img id="pic" src="./off.png" alt="" style="width:180px; ">
+        <br>
+
+        <div style="text-align: center;">
+            <button id="on" onclick="light()">light on</button>
+            <button id="off" onclick="lightoff()">light off</button>
+        </div>
+
+        <h1>javascript See more and see less button</h1>
+
+        <p id="paragraph">JavaScript was created by Brendan Eich in 1995 while he was working at Netscape Communications Corporation. Initially named Mocha, it was later renamed LiveScript and finally JavaScript as a marketing strategy to capitalize on the popularity of Java. Despite the name similarity, JavaScript and Java are distinct languages with different purposesThe language underwent significant developments with the release of ECMAScript, a standard that defines the core features of JavaScript. ECMAScript versions, such as ES5, ES6 (also known as ECMAScript 2015), and subsequent iterations, introduced new features and improvements, enhancing the language's capabilities and making it more versatile.</p>
+<button id="text1" onclick="toggleText()">seemore</button>
+
+
+
+
+    </div>
+</body>
+
+<script>
+    function light() {
+        document.getElementById("pic").src = "on.png"
+    }
+    function lightoff() {
+        document.getElementById("pic").src = "off.png"
+    }
+
+    function toggleText() {
+    var paragraph = document.getElementById("paragraph");
+    var button = document.getElementById("text1");
+
+    if (paragraph.innerHTML === "JavaScript was created by Brendan Eich in 1995 while he was working at Netscape Communications Corporation. Initially named Mocha, it was later renamed LiveScript and finally JavaScript as a marketing strategy to capitalize on the popularity of Java. Despite the name similarity, JavaScript and Java are distinct languages with different purposesThe language underwent significant developments with the release of ECMAScript, a standard that defines the core features of JavaScript. ECMAScript versions, such as ES5, ES6 (also known as ECMAScript 2015), and subsequent iterations, introduced new features and improvements, enhancing the language's capabilities and making it more versatile.") {
+        paragraph.innerHTML = "JavaScript was created by Brendan Eich in 1995 while he was working at Netscape Communications Corporation. Initially named Mocha, it was later renamed LiveScript and finally JavaScript as a marketing strategy to capitalize on the popularity of Java. Despite the name similarity, JavaScript and Java are distinct languages with different purposes.";
+        button.innerHTML = "seemore";
+    } else {
+        paragraph.innerHTML = "JavaScript was created by Brendan Eich in 1995 while he was working at Netscape Communications Corporation. Initially named Mocha, it was later renamed LiveScript and finally JavaScript as a marketing strategy to capitalize on the popularity of Java. Despite the name similarity, JavaScript and Java are distinct languages with different purposesThe language underwent significant developments with the release of ECMAScript, a standard that defines the core features of JavaScript. ECMAScript versions, such as ES5, ES6 (also known as ECMAScript 2015), and subsequent iterations, introduced new features and improvements, enhancing the language's capabilities and making it more versatile.";
+        button.innerHTML = "seeless";
+    }
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</html>
